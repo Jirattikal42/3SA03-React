@@ -1,8 +1,13 @@
+body {
+  background-image: url("https://krujengtutor.com/wp-content/uploads/revslider/HOMEBANNER2/bn3-bg.png");
+}
+
 .card {
+  background-image: url("https://www.lcia.org.au/wp-content/uploads/2014/08/picture-bg.gif");
   display: inline-block;
   text-align: center;
   width: 3em;
-  font-size: 2em;
+  font-size: 4em;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   margin: 1em;
   user-select: none;
@@ -12,4 +17,17 @@
   color: red;
   background: pink;
  }
+
+ .cardlayout {
+  font-size: 15px;
+  font-family: "Lucida Console", Courier, monospace;
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: "Lucida Console", Courier, monospace;
+  text-align: center;
+}
+ 
  
