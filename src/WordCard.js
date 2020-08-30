@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import _ from 'lodash';
 import CharacterCard from './CharacterCard';
 
+var temp = 0;
+
 
 const prepareStateFromWord = (given_word) => {
     let word = given_word.toUpperCase()
@@ -9,7 +11,7 @@ const prepareStateFromWord = (given_word) => {
     return {
         word,
         chars,
-        attempt: 1,
+        attempt: 0,
         guess: '',
         completed: false
         }
@@ -34,13 +36,17 @@ export default function WordCard(props){
                 
             }else{
                 alert("try agian !!");
-                setState({...state, guess: '', attempt: state.attempt + 1})
-                
+                state.attempt += 1;
+                setState({...state, guess: '', attempt: state.attempt})      
             }
         }
+        temp = state.attempt;
     }
     return (
         <div> 
+            <div class="AttemptAndAnswer">
+                Attempt : {temp}
+            </div>
             { 
 
                 state.chars.map((c, i) => 
