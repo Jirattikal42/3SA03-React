@@ -3,7 +3,7 @@ import _ from 'lodash';
 import CharacterCard from './CharacterCard';
 
 var temp = 0;
-
+var yourcharacter = "";
 
 const prepareStateFromWord = (given_word) => {
     let word = given_word.toUpperCase()
@@ -21,6 +21,8 @@ const prepareStateFromWord = (given_word) => {
 export default function WordCard(props){
 
     const [state, setState] = useState(prepareStateFromWord(props.value))
+
+    yourcharacter = state.guess;
 
     const activationHandler = c => { 
         console.log(`${c} has been activated.`) 
@@ -46,6 +48,9 @@ export default function WordCard(props){
         <div> 
             <div class="AttemptAndAnswer">
                 Attempt : {temp}
+                <br></br>
+                <br></br>
+                Your Answer : {yourcharacter}
             </div>
             { 
 
